@@ -1,0 +1,275 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-image: url(Skull-Bg.png); /* Your background image */
+    background-repeat: no-repeat; /* No repeating the background */
+    background-size: cover; /* Ensures the image covers the entire screen */
+    background-position: center center; /* Centers the image on the screen */
+    background-attachment: fixed; /* Keeps the image fixed when scrolling */
+    margin: 0; /* Removes any default margin from the body */
+}
+
+
+.navbar a{
+    color: white;
+}
+
+nav{
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.navbar{
+    background-color: rgb(39, 39, 39) ;
+    
+}
+
+.home{
+    padding-top: 5px;
+}
+
+.intro{
+    display: flex;  
+    justify-content: space-between;    
+    align-items: flex-end;
+    flex-direction: column;
+    padding: 5%;
+    margin-right: 70px;
+    margin-top: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+}
+
+.cursor {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: white;
+    mix-blend-mode: difference;
+    pointer-events: none; /* Ensure cursor doesn't block interactions */
+    z-index: 9999; /* Make sure it's always on top */
+    transition: transform 0.2 ease;
+  }
+  
+.navbar a{
+    color: white;
+}
+    
+.navbar a:hover{
+    color: rgb(243, 138, 0);
+    background-color: transparent;
+    text-decoration: underline;
+
+}
+.navbar a.active{
+    color: rgb(247, 104, 104);
+}
+
+a:visited{
+    columns: rgb(255, 140, 140);
+}
+
+ul li img:hover + .cursor{
+    transform: scale(6);
+}
+
+.intro h1:hover{
+    transform: scale(1.2);
+}
+
+.intro h1{
+transition: 1s ease;
+cursor: pointer;
+font-size: 60px;
+}
+
+.products{
+    padding-top: 80px;
+}
+
+.images2{
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.images{
+    display: flex;
+    justify-content: space-around;
+}
+
+.prices{
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding-top: 10px;
+    font-size: 14px;
+}
+
+.BaseProd{
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.BaseProd {
+    overflow: hidden; /* Prevents overflow from scaling */
+}
+
+.BaseProd h1 {
+    display: inline-block; /* Allows scaling without causing overflow */
+    transition: 1s;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 60px;
+}
+
+.BaseProd h1:hover {
+    transform: scale(1.2);
+}
+
+.images img, p{
+    transition: 1s;
+    cursor: pointer;
+}
+
+.images img:hover{
+    transform: scale(1.2);
+    transform: rotateY(180deg);
+}
+
+.images2 img{
+    transition: 1s;
+    cursor: pointer;
+}
+
+.images2 img:hover{
+    transform: scale(1.2);
+    transform: rotateY(180deg);
+}
+
+.intro h1 {
+    display: inline-block;
+    position: relative;
+}
+
+.intro h1::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0); /* Initial collapsed state */
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #e99f00;
+    transform-origin: bottom center;
+    transition: transform 0.25s ease-out; /* Animation on the transform property */
+}
+
+.intro h1:hover::after {
+    transform: scaleX(1); /* Expands when hovered */
+}
+
+  .intro h1::after {
+    transform-origin: bottom center;
+  }
+  
+  .intro h1:hover::after {
+    transform-origin: bottom center;
+  }
+  
+  .BaseProd h1 {
+    display: inline-block;
+    position: relative;
+}
+
+.BaseProd h1::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0); /* Initial collapsed state */
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #e99f00;
+    transform-origin: bottom center;
+    transition: transform 0.25s ease-out; /* Animation on the transform property */
+}
+
+.BaseProd h1:hover::after {
+    transform: scaleX(1); /* Expands when hovered */
+}
+
+.BaseProdh1::after {
+    transform-origin: bottom center;
+  }
+  
+  .BaseProd h1:hover::after {
+    transform-origin: bottom center;
+  }
+
+  .content {
+    width: 100%;
+    max-width: 600px;
+  }
+
+.BaseProd img{
+    border: 1px solid rgb(122, 122, 122);
+    border-radius: 30px;
+}  
+
+.prices a{
+    background-color: rgb(255, 255, 255);
+    border-radius: 30px;
+    border: 1px solid rgb(0, 0, 0);
+    width: 15%;
+    height: 45px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+.lower{
+    padding-top: 5px;
+}
+.BaseProd{
+    background-color: rgb(8, 8, 8);
+}
+
+.login {
+    background:url('https://dh3vbjnk0bnfa.cloudfront.net/static/centralauth/images/btn-login.png') no-repeat 5px 5px #484B4F;
+     width: 100px;
+     cursor:pointer;
+     border-radius:50px;
+     padding:10px 20px 10px 0;
+     color:White;
+     font-size:14px;
+     text-align:left;
+   color:white;
+     text-indent:40px;
+     display:block;
+     margin:0 auto;
+    
+     /* Animations: */
+/* For WebKit browsers (Chrome, Safari, newer Opera versions) */
+-webkit-transition: all .4s ease-in-out;
+
+/* For Mozilla (Firefox) */
+-moz-transition: all .4s ease-in-out;
+
+/* Standard CSS (most modern browsers) */
+transition: all .4s ease-in-out;
+   }
+   
+   .login:hover {
+     background-image: url('https://dh3vbjnk0bnfa.cloudfront.net/static/centralauth/images/btn-login-hover.png');
+     background-position: 65px 5px;
+     text-indent: 20px;  
+   }
+   

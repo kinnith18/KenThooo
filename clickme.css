@@ -1,0 +1,44 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height of the viewport */
+    background-color: #f0f0f0; /* Light background for contrast */
+    margin: 0;
+    font-family: Arial, sans-serif; /* Font style */
+}
+
+.heart {
+    position: relative;
+    width: 100px; /* Width of the heart */
+    height: 100px; /* Height of the heart */
+    background-color: red; /* Heart color */
+    transform: rotate(315deg); /* Rotate to form a heart */
+    margin-bottom: 20px; /* Space between heart and text */
+}
+
+.heart::before,
+.heart::after {
+    content: "";
+    position: absolute;
+    width: 100px; /* Width of the heart */
+    height: 100px; /* Height of the heart */
+    background-color: red; /* Heart color */
+    border-radius: 50%; /* Make it round */
+}
+
+.heart::before {
+    top: -50px; /* Position the top part of the heart */
+    left: 0;
+}
+
+.heart::after {
+    left: 50px; /* Position the right part of the heart */
+    top: 0;
+}
+
+p {
+    font-size: 24px; /* Font size of the text */
+    color: #333; /* Text color */
+}
